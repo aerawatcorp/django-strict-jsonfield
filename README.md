@@ -72,7 +72,7 @@ Contents:
 			class DJANGOModel(models.Model):
 				created_on_bs = CreatedDateField()
 	
-	3: InforcedKeyJSONField
+	3: EnforcedKeyJSONField
 	-----------
 
 		- This field overrride Django Default JSONField and help control over possibel keys and schema
@@ -82,7 +82,7 @@ Contents:
 			a: Full 
 				- Here developer can specify full valid schema
 				example:
-					meta = InforcedKeyJSONField(full=True, schema='schemas/jsonschema.example.json')
+					meta = EnforcedKeyJSONField(full=True, schema='schemas/jsonschema.example.json')
 				
 				Note: if full=True, schema parameter is must		
 
@@ -160,7 +160,7 @@ Contents:
 				
 				example:
 				
-					meta = InforcedKeyJSONField(partial=True, allowed_keys={"key1", "key2"})
+					meta = EnforcedKeyJSONField(partial=True, allowed_keys={"key1", "key2"})
 				
 				Note: if partial=True, allowed_keys parameter is must		
 
@@ -170,5 +170,5 @@ Contents:
 				- Normal JSONField
 				
 				example:
-					meta = InforcedKeyJSONField()
+					meta = EnforcedKeyJSONField()
 
