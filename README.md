@@ -86,11 +86,12 @@ Contents:
 				
 				Note: if full=True, schema parameter is must		
 
-				read_time_validate paramter is by default false
+				read_time_validate parameter is by default false
 					this flag controls if developer need readtime validaiton on stored data
 					
-				This helps on conditions when some places invalid json (Not as per schema) directly from database 
-				(If someone try from django environment Django Field validation would not allow against schema but this flag will 					 provide necessary precautions if someone temper directly from database)
+				This helps on conditions when someone places invalid json (Not as per schema) directly from database
+				(If someone try from django environment Django Field validation would not allow against schema but this flag will
+				provide necessary precautions if someone temper directly from database)
 				
 				Schema Samples (To learn deeper follow https://json-schema.org/learn/getting-started-step-by-step):
 					
