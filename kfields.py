@@ -45,6 +45,7 @@ class KIdxField(models.CharField):
             _table_name = instance._meta.db_table
             prefix = getattr(KIDX_MODEL_MAP, _table_name, "ID")
             value = self._generate_uuid(prefix)
+        setattr(instance, self.attname, value)
         return value
 
     def deconstruct(self):
