@@ -1,0 +1,4 @@
+django-shortuuidfield
+django
+shortuuid
+jsonschema==4.17.3
